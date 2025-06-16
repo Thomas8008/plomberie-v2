@@ -347,114 +347,119 @@ height: 650px;
 /* section 3 */
 
 .section3 {
-
   text-align: center;
   padding: 50px 20px;
-  background-image: url(.);
+ background-color: rgba(197, 197, 197, 0.267);
   background-size: cover;
- background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
   min-height: 60vh;
-
 }
 
-
-   .gallery-section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .gallery-title {
-      text-align: center;
-      font-size: 2.75rem;
-      font-weight: 600;
-      margin-bottom: 50px;
-      color: #222;
-      
-    }
-    .carousel-wrapper {
-      overflow: hidden;
-      position: relative;
-      top: 100px;
-    }
-    .carousel-track {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 20px;
-      animation: scroll 30s linear infinite;
-    }
-    @keyframes scroll {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
-    .carousel-card {
-      flex: 0 0 auto;
-      width: 280px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    .carousel-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
-    .carousel-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    .carousel-card:hover img {
-      transform: scale(1.05);
-    }
-    .carousel-info {
-      padding: 15px;
-      text-align: center;
-    }
-    .carousel-info h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #333;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .modal-content {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
+.gallery-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.gallery-title {
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #222;
+}
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  top: 100px;
+  perspective: 1000px;
+}
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.carousel-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 280px;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+.carousel-card:hover {
+  transform: rotateY(8deg) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+.carousel-card img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.carousel-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+  z-index: 2;
+  text-align: left;
+}
+.carousel-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.carousel-content p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.modal-content {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 
 /* contact */
@@ -463,7 +468,7 @@ height: 650px;
 /* section 4 */
 .section4{
  height: 70vh;
-
+background-color: rgba(197, 197, 197, 0.267);
 background-repeat: no-repeat;
 background-size: 100% 100%;
 }
@@ -533,3 +538,5 @@ p{
         padding: 1.5rem;
       }
     }
+
+ 
