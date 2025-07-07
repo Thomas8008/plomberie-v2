@@ -385,7 +385,7 @@ height: 650px;
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-55%);
   }
 }
 .carousel-card {
@@ -539,4 +539,6 @@ p{
       }
     }
 
- 
+ .calendly-inline-widget{
+  height: 50vh;
+ }

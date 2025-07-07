@@ -1,8 +1,21 @@
 /* Mobile petits écrans */
 @media (max-width: 480px) {
+
+
+  @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-470%);
+  }}
   .card-link-button{
     margin-top: 200px;
+
   }
+  .carousel-track {
+  animation: scroll 25s linear infinite;
+}
 
   .title-icons{
   font-size: 1.5rem;
@@ -19,16 +32,36 @@
 
 /* Mobile général */
 @media (max-width: 768px) {}
-
+    .carousel-track {
+  animation: scroll 25s linear infinite;
+}
+  @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-170%);
+  }}
 /* Tablettes */
 @media (min-width: 769px) and (max-width: 1024px) {
+  
    .card-link-button{
     margin-top: 300px;
   }
   .cards-container{
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
   }
+    .carousel-track {
+  animation: scroll 25s linear infinite;
+}
+  @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }}
 }
 
 /* Desktop standard */
@@ -44,7 +77,19 @@
 
 /* Grand écran */
 @media (min-width: 1441px) {
-  
+  .carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  animation: scroll 25s linear infinite;
 }
-
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-55%);
+  }
+}
+}
 
